@@ -1,0 +1,34 @@
+.pic {
+    position: fixed;
+    width: 15vw;
+    height: 10vh;
+}
+
+.plane {
+    background: url("../img/plane.png");
+    background-size: cover;
+}
+
+#plane1{
+
+}
+
+#plane2 {
+    left: 25vw;
+    top: 5vh;
+}
+
+#plane3 {
+    left: 60vw;
+    top: 30vh;
+}
+
+#plane4 {
+    left: 30vw;
+    top: 60vh;
+}
+
+#plane5 {
+    left: 50vw;
+    top: 70vh;
+}

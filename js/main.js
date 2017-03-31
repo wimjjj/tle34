@@ -47,8 +47,8 @@ function showMessageBox(msg){
  */
 function updateCounter(){
  var elem = $("#counter");
- var count = elem.html().slice(0, -2);
+ var count = elem.html().substr(0, elem.html().indexOf("/"));
  count++;
 
- elem.html(count + elem.html().slice(-2))
+ elem.html(count + elem.html().substr(elem.html().indexOf("/")));
 }

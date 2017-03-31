@@ -29,6 +29,22 @@
     left: 1vh;
 }
 
+#info {
+    position: fixed;
+    bottom: -7vh;
+    width: 133vh;
+    text-align: center;
+}
+
+#startBtn{
+    position: fixed;
+    text-decoration: none;
+    font-size: 20vh;
+    text-align: center;
+    width: 133vh;
+    top: 60vh;
+}
+
 .item {
     position: fixed;
 }

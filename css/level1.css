@@ -1,9 +1,13 @@
 #plane1 {
-
+    left: 123.8vh;
+    top: 44vh;
+    height: 22vh;
 }
 
 #plane2 {
-
+    left: 126.7vh;
+    top: 0.8vh;
+    height: 14vh;
 }
 
 #plane3 {

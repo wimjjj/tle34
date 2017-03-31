@@ -1,6 +1,11 @@
-.pic {
-    position: fixed;
-    width: 15vw;
+@import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
+
+* {
+    font-family: 'Walter Turncoat', cursive;
+    font-weight: 900;
+    color: red;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    font-size: 7vh;
 }
 
 #background {
@@ -8,6 +13,20 @@
     top: 0;
     left: 0;
     height: 100vh;
+}
+
+.messageBox {
+    position: fixed;
+    top: 5vh;
+    width: 133vh;
+    text-align: center;
+    animation: pop 4s ease-in-out;
+}
+
+#counter {
+    position: fixed;
+    bottom: -7vh;
+    left: 1vh;
 }
 
 .item {

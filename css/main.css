@@ -36,6 +36,12 @@
     text-align: center;
 }
 
+#time {
+    position: fixed;
+    bottom: -7vh;
+    right: 1vh;
+}
+
 #startBtn{
     position: fixed;
     text-decoration: none;

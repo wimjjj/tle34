@@ -23,11 +23,11 @@ $(".item").click(function (e) {
 });
 
 /**
- * updates the timer every 1s with 1
+ * increases the timer every 1s with 1
  */
 setInterval(function () {
-    var elem = $("#time");
-    var count = Number(elem.html());
+    let elem = $("#time");
+    let count = Number(elem.html());
     count++;
     elem.html(count);
 }, 1000);
@@ -39,10 +39,10 @@ setInterval(function () {
  * @param msg
  */
 function showMessageBox(msg) {
-    var messageBoxes = $(".messageBox");
+    let messageBoxes = $(".messageBox");
     if (messageBoxes.length) messageBoxes.remove();
 
-    var elem = document.createElement('p');
+    let elem = document.createElement('p');
     elem.classList.add("messageBox");
     elem.innerHTML = msg;
     document.body.append(elem);
@@ -53,11 +53,11 @@ function showMessageBox(msg) {
 }
 
 /**
- * updates the counter by 1
+ * increases the counter by 1
  */
 function updateCounter() {
-    var elem = $("#counter");
-    var count = elem.html().substr(0, elem.html().indexOf("/"));
+    let elem = $("#counter");
+    let count = elem.html().substr(0, elem.html().indexOf("/"));
     count++;
 
     elem.html(count + elem.html().substr(elem.html().indexOf("/")));

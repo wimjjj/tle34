@@ -3,18 +3,29 @@
  */
 
 /**
+ * array with the items the players has already found
+ * @type {Array}
+ */
+var foundItems = [];
+
+/**
  * add the onClick listerners to the items
  */
 $( ".item" ).click(function(e) {
+    if(foundItems.indexOf(e.target.id) !== -1) return;
+
     e.target.classList.add("greyscale", "pop");
+
     showMessageBox("Je hebt een vliegtuig gevonden!");
     updateCounter();
+
+    foundItems.push(e.target.id);
 });
 
 /**
  * shows the big messageBox.
  * will remove all other messageBoxes show
- * messageBox wil be removed after 4s
+ * messageBox wil be removed after 2.5s
  * @param msg
  */
 function showMessageBox(msg){
@@ -28,7 +39,7 @@ function showMessageBox(msg){
 
     setTimeout(function(){
         this.elem.remove();
-    }.bind({elem}), 4000);
+    }.bind({elem}), 2500);
 }
 
 /**
@@ -36,8 +47,8 @@ function showMessageBox(msg){
  */
 function updateCounter(){
  var elem = $("#counter");
- var count = elem.html().slice(0, -3);
+ var count = elem.html().slice(0, -2);
  count++;
 
- elem.html(count + elem.html().slice(-3))
+ elem.html(count + elem.html().slice(-2))
 }

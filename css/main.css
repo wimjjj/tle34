@@ -54,18 +54,18 @@
     position: fixed;
     text-decoration: none;
     font-size: 7vh;
-    text-align: left;
+    text-align: center;
     width: 133vh;
-    top: 30vh;
+    top: 20vh;
 }
 
 #timeBtn {
     position: fixed;
     text-decoration: none;
     font-size: 7vh;
-    text-align: right;
+    text-align: center;
     width: 133vh;
-    top: 30vh;
+    top: 40vh;
 }
 
 .item {

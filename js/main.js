@@ -66,5 +66,5 @@ function updateCounter() {
 }
 
 function checkForWin() {
-
+    foundItems.length == 
 }

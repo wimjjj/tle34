@@ -14,6 +14,9 @@ var foundItems = [];
  */
 var numberOfItems = $('.item').length;
 
+//inti the counter
+updateCounter();
+
 /**
  * add the onClick listerners to the items
  */

@@ -20,12 +20,13 @@ var numberOfItems = $('.item').length;
 $(".item").click(function (e) {
     if (foundItems.indexOf(e.target.id) !== -1) return;
 
+    foundItems.push(e.target.id);
     e.target.classList.add("black", "pop");
 
     showMessageBox("Je hebt een vliegtuig gevonden!");
     updateCounter();
+    checkForWin();
 
-    foundItems.push(e.target.id);
 });
 
 /**
@@ -43,8 +44,9 @@ setInterval(function () {
  * will remove all other messageBoxes show
  * messageBox wil be removed after 2.5s
  * @param msg
+ * @param flash
  */
-function showMessageBox(msg) {
+function showMessageBox(msg, flash = true) {
     let messageBoxes = $(".messageBox");
     if (messageBoxes.length) messageBoxes.remove();
 
@@ -53,18 +55,20 @@ function showMessageBox(msg) {
     elem.innerHTML = msg;
     document.body.append(elem);
 
-    setTimeout(function () {
-        this.elem.remove();
-    }.bind({elem}), 2500);
+    if(flash) {
+        setTimeout(function () {
+            this.elem.remove();
+        }.bind({elem}), 2500);
+    }
 }
 
 /**
  * updates the counter with the current number of found items
  */
 function updateCounter() {
-    $("#counter").html(Number(foundItems.length + 1) + "/" + numberOfItems);
+    $("#counter").html(Number(foundItems.length) + "/" + numberOfItems);
 }
 
 function checkForWin() {
-    foundItems.length == 
+    if(foundItems.length === numberOfItems) showMessageBox("Je hebt gewonnen!", false);
 }

@@ -14,7 +14,13 @@ var foundItems = [];
  */
 var numberOfItems = $('.item').length;
 
-//inti the counter
+/**
+ * value of the timer
+ * @type {number}
+ */
+var timer = 0
+
+//init the counter
 updateCounter();
 
 /**
@@ -35,11 +41,13 @@ $(".item").click(function (e) {
 /**
  * increases the timer every 1s with 1
  */
-var timer = setInterval(function () {
+var timerId = setInterval(function () {
     let elem = $("#time");
-    let count = Number(elem.html());
-    count++;
-    elem.html(count);
+
+    elem.html(timer++);
+
+    let left = $("#background").innerWidth() - elem.innerWidth() - 10;
+    elem.css({'left': left});
 }, 1000);
 
 /**
@@ -79,6 +87,6 @@ function updateCounter() {
 function checkForWin() {
     if (foundItems.length === numberOfItems) {
         showMessageBox("Je hebt gewonnen!", false);
-        clearInterval(timer);
+        clearInterval(timerId);
     }
 }

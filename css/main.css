@@ -50,6 +50,24 @@
     top: 60vh;
 }
 
+#tutorialBtn {
+    position: fixed;
+    text-decoration: none;
+    font-size: 7vh;
+    text-align: left;
+    width: 133vh;
+    top: 30vh;
+}
+
+#timeBtn {
+    position: fixed;
+    text-decoration: none;
+    font-size: 7vh;
+    text-align: right;
+    width: 133vh;
+    top: 30vh;
+}
+
 .item {
     position: fixed;
 }

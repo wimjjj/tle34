@@ -9,6 +9,11 @@
 var foundItems = [];
 
 /**
+ * amout af items
+ * @type {number}
+ */
+var numberOfItems = $('.item').length;
+/**
  * add the onClick listerners to the items
  */
 $(".item").click(function (e) {
@@ -53,12 +58,8 @@ function showMessageBox(msg) {
 }
 
 /**
- * increases the counter by 1
+ * updates the counter with the current number of found items
  */
 function updateCounter() {
-    let elem = $("#counter");
-    let count = elem.html().substr(0, elem.html().indexOf("/"));
-    count++;
-
-    elem.html(count + elem.html().substr(elem.html().indexOf("/")));
+    $("#counter").html(Number(foundItems.length + 1) + "/" + numberOfItems);
 }

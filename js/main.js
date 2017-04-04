@@ -47,7 +47,7 @@ var timerId = setInterval(function () {
 
     elem.html(timer++);
 
-    let left = $("#background").innerWidth() - elem.innerWidth() - 10;
+    let left = $("#background").width() - elem.width() - 10;
     elem.css({'left': left});
 }, 1000);
 

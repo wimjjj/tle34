@@ -17,7 +17,7 @@
 
 .messageBox {
     position: fixed;
-    top: 5vh;
+    top: 57vh;
     width: 133vh;
     text-align: center;
     animation: pop 4s ease-in-out;

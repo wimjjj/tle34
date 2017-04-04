@@ -55,8 +55,8 @@
     position: fixed;
 }
 
-.greyscale {
-    filter: grayscale(100%);
+.black {
+    filter: brightness(0%);
 }
 
 .pop {

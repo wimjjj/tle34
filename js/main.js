@@ -13,13 +13,14 @@ var foundItems = [];
  * @type {number}
  */
 var numberOfItems = $('.item').length;
+
 /**
  * add the onClick listerners to the items
  */
 $(".item").click(function (e) {
     if (foundItems.indexOf(e.target.id) !== -1) return;
 
-    e.target.classList.add("greyscale", "pop");
+    e.target.classList.add("black", "pop");
 
     showMessageBox("Je hebt een vliegtuig gevonden!");
     updateCounter();
@@ -62,4 +63,8 @@ function showMessageBox(msg) {
  */
 function updateCounter() {
     $("#counter").html(Number(foundItems.length + 1) + "/" + numberOfItems);
+}
+
+function checkForWin() {
+
 }

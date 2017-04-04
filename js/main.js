@@ -32,7 +32,7 @@ $(".item").click(function (e) {
 /**
  * increases the timer every 1s with 1
  */
-setInterval(function () {
+var timer = setInterval(function () {
     let elem = $("#time");
     let count = Number(elem.html());
     count++;
@@ -55,7 +55,7 @@ function showMessageBox(msg, flash = true) {
     elem.innerHTML = msg;
     document.body.append(elem);
 
-    if(flash) {
+    if (flash) {
         setTimeout(function () {
             this.elem.remove();
         }.bind({elem}), 2500);
@@ -70,5 +70,8 @@ function updateCounter() {
 }
 
 function checkForWin() {
-    if(foundItems.length === numberOfItems) showMessageBox("Je hebt gewonnen!", false);
+    if (foundItems.length === numberOfItems) {
+        showMessageBox("Je hebt gewonnen!", false);
+        clearInterval(timer);
+    }
 }

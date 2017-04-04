@@ -23,6 +23,7 @@ var timer = 0
 //init the counter
 updateCounter();
 
+
 /**
  * add the onClick listerners to the items
  */
@@ -42,7 +43,7 @@ $(".item").click(function (e) {
  * increases the timer every 1s with 1
  */
 var timerId = setInterval(function () {
-    let elem = $("#time");
+    let elem = $("#timer");
 
     elem.html(timer++);
 
@@ -53,7 +54,6 @@ var timerId = setInterval(function () {
 /**
  * shows the big messageBox.
  * will remove all other messageBoxes show
- * messageBox wil be removed after 2.5s
  * @param msg
  * @param flash
  */

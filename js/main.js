@@ -69,6 +69,10 @@ function updateCounter() {
     $("#counter").html(Number(foundItems.length) + "/" + numberOfItems);
 }
 
+/**
+ * checks if the player has won
+ * if so, show the 'you have won' message and stop the timer
+ */
 function checkForWin() {
     if (foundItems.length === numberOfItems) {
         showMessageBox("Je hebt gewonnen!", false);

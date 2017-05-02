@@ -103,5 +103,10 @@ function checkForWin() {
     if (foundItems.length === numberOfItems) {
         showMessageBox("Je hebt gewonnen!", false);
         clearInterval(timerId);
+
+        setTimeout(() => {
+            levelNummer++;
+            window.location.href = "/level.html?level=" + levelNummer;
+        }, 1500);
     }
 }

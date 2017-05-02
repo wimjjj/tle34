@@ -31,7 +31,6 @@ loadLevel(1).then(initGame);
  * add the onClick listerners to the items
  */
 function initGame(){
-    console.log("second");
     numberOfItems = $('.item').length;
 
     updateCounter();

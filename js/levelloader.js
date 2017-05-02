@@ -16,8 +16,6 @@ function loadLevel(levelNummer){
 
             setMessage(level.message)
 
-            console.log("first");
-
             resolve();
         });
     });

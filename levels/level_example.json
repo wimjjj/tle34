@@ -1,0 +1,20 @@
+{
+    "level": 1,
+    "message": "The instructions for the player, like: 'Find al planes!'",
+    "succes_message": "The pop-up message for if the player finds an item, like: 'You have found a plane!'",
+    "background_image_url": "url to the backgroundimg. Please use start relative urls with a '/', like '/img/background.png'",
+    "planes": [
+        {
+            "left": "The left margin, like: '123.8vh'",
+            "top": "The top margin, like: '44vh'",
+            "height": "The heigth, like: '22vh'",
+            "image": "Url to the img. please start relative urls with a '/', like: '/img/plane1.png'"
+        },
+        {
+            "left": "The left margin, like: '123.8vh'",
+            "top": "The top margin, like: '44vh'",
+            "height": "The heigth, like: '22vh'",
+            "image": "Url to the img. please start relative urls with a '/', like: '/img/plane1.png'"
+        }
+    ]
+}

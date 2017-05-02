@@ -27,7 +27,7 @@ var timer = 0
  */
 var timerId = 0;
 
-var levelNummer = Number(new URLSearchParams(window.location.search).get("level"));
+var levelNummer = new URLSearchParams(window.location.search).get("level");
 
 
 //load the level and init the game

@@ -44,7 +44,7 @@ function initGame(){
         foundItems.push(e.target.id);
         e.target.classList.add("black", "pop");
 
-        showMessageBox("Je hebt een vliegtuig gevonden!");
+        showMessageBox(succesMessage);
         updateCounter();
         checkForWin();
 

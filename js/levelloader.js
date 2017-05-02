@@ -1,4 +1,9 @@
 /**
+ * message for succes flash
+ */
+var succesMessage = "";
+
+/**
  * Load a level
  * @param {int} levelNummer 
  * @return {Promise} 
@@ -14,7 +19,9 @@ function loadLevel(levelNummer){
 
             addBackground(level.background_image_url);
 
-            setMessage(level.message)
+            setMessage(level.message);
+
+            succesMessage = level.succes_message;
 
             resolve();
         });

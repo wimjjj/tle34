@@ -1,0 +1,86 @@
+{
+    "level": 1,
+    "message": "Vind alle vliegtuigen",
+    "succes_message": "Je hebt een vliegtuig gevonden!",
+    "background_image_url": "/img/background.png",
+    "planes": [
+        {
+            "left": "123.8vh",
+            "top": "44vh",
+            "height": "22vh",
+            "image": "/img/plane1.png"
+        },
+        {
+            "left": "126.7vh",
+            "top": "0.8vh",
+            "height": "14vh",
+            "image": "/img/plane2.png"
+        },   
+        {
+            "left": "76.5vh",
+            "top": "2.5vh",
+            "height": "9vh",
+            "image": "/img/plane3.png"
+        },
+        {
+            "left": "45.7vh",
+            "top": "3.1vh",
+            "height": "12vh",
+            "image": "/img/plane4.png"
+        },
+        {
+            "left": "1.7vh",
+            "top": "1.8vh",
+            "height": "9vh",
+            "image": "/img/plane5.png"
+        },
+        {
+            "left": "43vh",
+            "top": "11.4vh",
+            "height": "16.5vh",
+            "image": "/img/plane6.png"
+        },
+        {
+            "left": "91.7vh",
+            "top": "20vh",
+            "height": "20vh",
+            "image": "/img/plane7.png"
+        },
+        {
+            "left": "52.7vh",
+            "top": "21.65vh",
+            "height": "13.7vh",
+            "image": "/img/plane8.png"
+        },
+        {
+            "left": "122.3vh",
+            "top": "31vh",
+            "height": "13vh",
+            "image": "/img/plane9.png"
+        },
+        {
+            "left": "131vh",
+            "top": "22vh",
+            "height": "6vh",
+            "image": "/img/plane10.png"
+        },
+        {
+            "left": "90vh",
+            "height": "7vh",
+            "top": "4.5vh",
+            "image": "/img/plane11.png"
+        },
+        {
+            "left": "18.85vh",
+            "top": "36.7vh",
+            "height": "36vh",
+            "image": "/img/plane12.png"
+        },
+        {
+            "left": "104vh",
+            "top": "39.1vh",
+            "height": "13vh",
+            "image": "/img/plane13.png"
+        }
+    ]
+}

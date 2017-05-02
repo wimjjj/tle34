@@ -2,9 +2,10 @@
  * Created by wim on 30/03/17.
  */
 
+
 /**
  * array with the items the players has already found
- * @type {Array}
+ * @type {array}
  */
 var foundItems = [];
 
@@ -12,7 +13,7 @@ var foundItems = [];
  * amout af items
  * @type {number}
  */
-var numberOfItems = $('.item').length;
+var numberOfItems;
 
 /**
  * value of the timer
@@ -21,23 +22,32 @@ var numberOfItems = $('.item').length;
 var timer = 0
 
 //init the counter
-updateCounter();
+
+loadLevel(1).then(initGame);
+
 
 
 /**
  * add the onClick listerners to the items
  */
-$(".item").click(function (e) {
-    if (foundItems.indexOf(e.target.id) !== -1) return;
+function initGame(){
+    console.log("second");
+    numberOfItems = $('.item').length;
 
-    foundItems.push(e.target.id);
-    e.target.classList.add("black", "pop");
-
-    showMessageBox("Je hebt een vliegtuig gevonden!");
     updateCounter();
-    checkForWin();
+    
+    $(".item").click(function (e) {
+        if (foundItems.indexOf(e.target.id) !== -1) return;
 
-});
+        foundItems.push(e.target.id);
+        e.target.classList.add("black", "pop");
+
+        showMessageBox("Je hebt een vliegtuig gevonden!");
+        updateCounter();
+        checkForWin();
+
+    });
+}
 
 /**
  * increases the timer every 1s with 1

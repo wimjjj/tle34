@@ -21,11 +21,14 @@ var numberOfItems;
  */
 var timer = 0
 
-//init the counter
+/**
+ * id of the timer interval
+ * @type {number}
+ */
+var timerId = 0;
 
+//load the level and init the game
 loadLevel(1).then(initGame);
-
-
 
 /**
  * add the onClick listerners to the items
@@ -46,19 +49,19 @@ function initGame(){
         checkForWin();
 
     });
+
+    /**
+     * increases the timer every 1s with 1
+     */
+    timerId = setInterval(function () {
+        let elem = $("#timer");
+
+        elem.html(timer++);
+
+        let left = $("#background").width() - elem.width() - 10;
+        elem.css({'left': left});
+    }, 1000);
 }
-
-/**
- * increases the timer every 1s with 1
- */
-var timerId = setInterval(function () {
-    let elem = $("#timer");
-
-    elem.html(timer++);
-
-    let left = $("#background").width() - elem.width() - 10;
-    elem.css({'left': left});
-}, 1000);
 
 /**
  * shows the big messageBox.

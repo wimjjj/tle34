@@ -36,8 +36,16 @@ h1 {
     margin: 1vh;
 }
 
+h2 {
+    font-size: 6vh;
+    margin-top: 20vh;
+}
+
 footer a {
     margin-top: 50px;
     font-size: 8vh;
+}
+
+a{
     text-decoration: none;
 }

@@ -24,7 +24,7 @@ function loadLevel(levelNummer){
             succesMessage = level.succes_message;
 
             resolve();
-        });
+        }).catch(loadEndScreen());
     });
 }
 
@@ -68,4 +68,8 @@ function setMessage(msg){
 
 function misClicked(e){
     console.log("you failed");
+}
+
+function loadEndScreen(){
+    window.location.href = "/end.html";
 }

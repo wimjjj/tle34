@@ -105,14 +105,14 @@ function checkForWin() {
         showMessageBox("Je hebt gewonnen!", false);
         clearInterval(timerId);
 
-        var timePoints = 100 - timer;
+        var timePoints = 60 - timer;
         timePoints < 0 ? timePoints = 0 : timePoints = timePoints;
         addPoints(timePoints);
 
         setTimeout(() => {
             levelNummer++;
             window.location.href = "/level.html?level=" + levelNummer;
-        }, 1500);
+        }, 4000);
     }
 }
 

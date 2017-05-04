@@ -131,7 +131,7 @@ function misClicked(e){
 function addPoints(i){
     points += i;
 
-    document.getElementById("points").innerHTML = "points: " + points;
+    document.getElementById("points").innerHTML = "punten: " + points;
 }
 
 /**

@@ -105,7 +105,7 @@ function checkForWin() {
         showMessageBox("Je hebt gewonnen!", false);
         clearInterval(timerId);
 
-        var timePoints = 60 - timer;
+        var timePoints = 60 - timer + 1;
         timePoints < 0 ? timePoints = 0 : timePoints = timePoints;
         addPoints(timePoints);
 

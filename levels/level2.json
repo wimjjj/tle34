@@ -1,14 +1,26 @@
 {
     "level": 2,
-    "message": "",
-    "succes_message": "",
-    "background_image_url": "",
+    "message": "Vind alle koffers",
+    "succes_message": "Je hebt een koffer gevonden!",
+    "background_image_url": "/img/background2.jpeg",
     "items": [
         {
             "left": "123.8vh",
             "top": "44vh",
             "height": "22vh",
             "image": "/img/plane1.png"
-        }        
+        },
+        {
+            "left": "20.8vh",
+            "top": "40vh",
+            "height": "22vh",
+            "image": "/img/plane1.png"
+        } ,
+        {
+            "left": "60vh",
+            "top": "10vh",
+            "height": "22vh",
+            "image": "/img/plane1.png"
+        }          
     ]
 }

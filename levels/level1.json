@@ -3,7 +3,7 @@
     "message": "Vind alle vliegtuigen",
     "succes_message": "Je hebt een vliegtuig gevonden!",
     "background_image_url": "/img/background.png",
-    "planes": [
+    "items": [
         {
             "left": "123.8vh",
             "top": "44vh",

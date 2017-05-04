@@ -1,0 +1,14 @@
+{
+    "level": 2,
+    "message": "",
+    "succes_message": "",
+    "background_image_url": "",
+    "items": [
+        {
+            "left": "123.8vh",
+            "top": "44vh",
+            "height": "22vh",
+            "image": "/img/plane1.png"
+        }        
+    ]
+}

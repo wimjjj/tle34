@@ -13,8 +13,8 @@ function loadLevel(levelNummer){
         $.getJSON("/levels/level" + levelNummer + ".json").then((level) => {
             console.log(level);
 
-            for(let i = 0; i < level.planes.length; i++){
-                addPlane(level.planes[i], i);
+            for(let i = 0; i < level.items.length; i++){
+                addPlane(level.items[i], i);
             }
 
             addBackground(level.background_image_url);

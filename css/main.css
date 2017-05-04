@@ -36,6 +36,14 @@
     text-align: center;
 }
 
+#points {
+    position: fixed;
+    bottom: 8vh;
+    width: 133vh;
+    text-align: center;
+    z-index: 100;
+}
+
 #timer {
     position: fixed;
     bottom: -7vh;

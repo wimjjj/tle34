@@ -27,6 +27,11 @@ var timer = 0
  */
 var timerId = 0;
 
+/**
+ * points the payer had earned
+ */
+var points = 0;
+
 var levelNummer = new URLSearchParams(window.location.search).get("level");
 
 
@@ -41,17 +46,7 @@ function initGame(){
 
     updateCounter();
     
-    $(".item").click(function (e) {
-        if (foundItems.indexOf(e.target.id) !== -1) return;
-
-        foundItems.push(e.target.id);
-        e.target.classList.add("black", "pop");
-
-        showMessageBox(succesMessage);
-        updateCounter();
-        checkForWin();
-
-    });
+    $(".item").click(itemClick);
 
     /**
      * increases the timer every 1s with 1
@@ -64,6 +59,12 @@ function initGame(){
         let left = $("#background").width() - elem.width() - 10;
         elem.css({'left': left});
     }, 1000);
+
+    /**
+     * add the miscliked eventlistener
+     */
+    document.getElementById("background").addEventListener('click', misClicked);
+
 }
 
 /**
@@ -104,9 +105,47 @@ function checkForWin() {
         showMessageBox("Je hebt gewonnen!", false);
         clearInterval(timerId);
 
+        var timePoints = 100 - timer;
+        timePoints < 0 ? timePoints = 0 : timePoints = timePoints;
+        addPoints(timePoints);
+
         setTimeout(() => {
             levelNummer++;
             window.location.href = "/level.html?level=" + levelNummer;
         }, 1500);
     }
+}
+
+/**
+ * eventListener for misclicks
+ * @param {event} e 
+ */
+function misClicked(e){
+    addPoints(-5);
+}
+
+/**
+ * add i to the points and redraw the elem
+ * @param {number} i 
+ */
+function addPoints(i){
+    points += i;
+
+    document.getElementById("points").innerHTML = "points: " + points;
+}
+
+/**
+ * eventListener for the items
+ * @param {event} e 
+ */
+function itemClick(e){
+    if (foundItems.indexOf(e.target.id) !== -1) return;
+
+    foundItems.push(e.target.id);
+    e.target.classList.add("black", "pop");
+
+    addPoints(10);      
+    showMessageBox(succesMessage);
+    updateCounter();
+    checkForWin();
 }

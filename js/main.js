@@ -102,6 +102,8 @@ function updateCounter() {
  */
 function checkForWin() {
     if (foundItems.length === numberOfItems) {
+        document.getElementById("levelComplete").play();
+
         showMessageBox("Je hebt gewonnen!", false);
         clearInterval(timerId);
 
@@ -122,6 +124,7 @@ function checkForWin() {
  */
 function misClicked(e){
     addPoints(-5);
+    document.getElementById("wrongClick").play();
 }
 
 /**
@@ -144,7 +147,8 @@ function itemClick(e){
     foundItems.push(e.target.id);
     e.target.classList.add("black", "pop");
 
-    addPoints(10);      
+    addPoints(10);
+    document.getElementById("correctClick").play();
     showMessageBox(succesMessage);
     updateCounter();
     checkForWin();

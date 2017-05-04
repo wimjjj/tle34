@@ -97,3 +97,7 @@
         -o-transform: scale(1.5, 1.5);
     }
 }
+
+audio {
+    display: none;
+}

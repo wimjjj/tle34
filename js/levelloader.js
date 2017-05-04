@@ -60,7 +60,7 @@ function addBackground(background){
 
 /**
  * sets the messagebox
- * @param {sting} msg 
+ * @param {string} msg 
  */
 function setMessage(msg){
     $("#info").html(msg);

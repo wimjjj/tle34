@@ -24,7 +24,7 @@ function loadLevel(levelNummer){
             succesMessage = level.succes_message;
 
             resolve();
-        }).catch(loadEndScreen());
+        }).catch(loadEndScreen);
     });
 }
 
@@ -64,10 +64,6 @@ function addBackground(background){
  */
 function setMessage(msg){
     $("#info").html(msg);
-}
-
-function misClicked(e){
-    console.log("you failed");
 }
 
 function loadEndScreen(){

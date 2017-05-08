@@ -1,26 +1,110 @@
 {
     "level": 2,
-    "message": "Vind alle koffers",
-    "succes_message": "Je hebt een koffer gevonden!",
-    "background_image_url": "/img/background2.jpeg",
+    "message": "Vind alle vliegtuigen",
+    "succes_message": "Je hebt een vliegtuig gevonden!",
+    "background_image_url": "/img/level2/background.jpg",
     "items": [
         {
-            "left": "123.8vh",
-            "top": "44vh",
-            "height": "22vh",
-            "image": "/img/plane1.png"
+            "left": "49.3vh",
+            "top": "50.8vh",
+            "height": "16vh",
+            "image": "/img/level2/plane1.png"
         },
         {
-            "left": "20.8vh",
-            "top": "40vh",
-            "height": "22vh",
-            "image": "/img/plane1.png"
-        } ,
+            "left": "80vh",
+            "top": "5vh",
+            "height": "10vh",
+            "image": "/img/level2/plane2.png"
+        },
+        {
+            "left": "0vh",
+            "top": "33vh",
+            "height": "14vh",
+            "image": "/img/level2/plane3.png"
+        },
+        {
+            "left": "104vh",
+            "top": "7vh",
+            "height": "6vh",
+            "image": "/img/level2/plane4.png"
+        },
+        {
+            "left": "108vh",
+            "top": "10.3vh",
+            "height": "12vh",
+            "image": "/img/level2/plane5.png"
+        },
+        {
+            "left": "80vh",
+            "top": "12.5vh",
+            "height": "9vh",
+            "image": "/img/level2/plane6.png"
+        },
+        {
+            "left": "27vh",
+            "top": "26vh",
+            "height": "16vh",
+            "image": "/img/level2/plane7.png"
+        },
+        {
+            "left": "85.1vh",
+            "top": "18.5vh",
+            "height": "9.3vh",
+            "image": "/img/level2/plane8.png"
+        },
+        {
+            "left": "86vh",
+            "top": "22vh",
+            "height": "16vh",
+            "image": "/img/level2/plane9.png"
+        },
+        {
+            "left": "53.2vh",
+            "top": "24.2vh",
+            "height": "15.3vh",
+            "image": "/img/level2/plane10.png"
+        },
+        {
+            "left": "0vh",
+            "top": "41.5vh",
+            "height": "13.6vh",
+            "image": "/img/level2/plane11.png"
+        },
+        {
+            "left": "9.8vh",
+            "top": "51.5vh",
+            "height": "13.5vh",
+            "image": "/img/level2/plane12.png"
+        },
+        {
+            "left": "16.3vh",
+            "top": "56.5vh",
+            "height": "17vh",
+            "image": "/img/level2/plane13.png"
+        },
+        {
+            "left": "129.2vh",
+            "top": "0vh",
+            "height": "13.5vh",
+            "image": "/img/level2/plane15.png"
+        },
+        {
+            "left": "75vh",
+            "top": "35vh",
+            "height": "30vh",
+            "image": "/img/level2/plane14.png"
+        },
+        {
+            "left": "61vh",
+            "top": "4.9vh",
+            "height": "7.2vh",
+            "image": "/img/level2/plane16.png"
+        },
         {
             "left": "60vh",
             "top": "10vh",
-            "height": "22vh",
-            "image": "/img/plane1.png"
-        }          
+            "height": "6.5vh",
+            "image": "/img/level2/plane17.png"
+        }
     ]
 }

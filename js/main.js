@@ -132,9 +132,32 @@ function misClicked(e){
  * @param {number} i 
  */
 function addPoints(i){
+    let displayPoints = i;
+    displayPoints > 0 ? displayPoints = "+" + displayPoints : displayPoints = displayPoints;
+    
+    let displayPointsElem = $("#newPoints");
+    
+    displayPointsElem.html(displayPoints);
+    
+    let newDisplayPointsElem = displayPointsElem.clone(true);
+    displayPointsElem.before(newDisplayPointsElem);
+    displayPointsElem.remove();
+
+    setTimeout(() => {
+        $("#newPoints").html("");
+    }, 1500);
+
+    if(points + i < 0) return;
+
     points += i;
 
-    document.getElementById("points").innerHTML = "punten: " + points;
+    let pointElem = $("#pointsNumber");
+    pointElem.html(points);
+    
+    // let newElem = pointElem.clone(true);
+    // pointElem.before(newElem);
+
+    // pointElem.remove();    
 }
 
 /**
@@ -149,7 +172,7 @@ function itemClick(e){
 
     addPoints(10);
     document.getElementById("correctClick").play();
-    showMessageBox(succesMessage);
+    // showMessageBox(succesMessage);
     updateCounter();
     checkForWin();
 }

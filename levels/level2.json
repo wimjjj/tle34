@@ -35,7 +35,7 @@
             "image": "/img/level2/plane5.png"
         },
         {
-            "left": "80vh",
+            "left": "79.7vh",
             "top": "12.5vh",
             "height": "9vh",
             "image": "/img/level2/plane6.png"
@@ -101,7 +101,7 @@
             "image": "/img/level2/plane16.png"
         },
         {
-            "left": "60vh",
+            "left": "68vh",
             "top": "10vh",
             "height": "6.5vh",
             "image": "/img/level2/plane17.png"

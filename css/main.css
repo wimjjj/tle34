@@ -97,9 +97,17 @@
     animation: popNumber 1.5s ease;
 }
 
+.popNumberFast {
+    animation: popNumber 0.5s ease;
+}
+
 #newPoints {
     font-size: 10vh;
     width: 100px;
+    display: inline-block;
+}
+
+#counterNumber {
     display: inline-block;
 }
 

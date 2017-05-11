@@ -44,7 +44,7 @@ loadLevel(levelNummer).then(initGame);
 function initGame(){
     numberOfItems = $('.item').length;
 
-    updateCounter();
+    $("#counterTotal").html(numberOfItems);
     
     $(".item").click(itemClick);
 
@@ -55,6 +55,12 @@ function initGame(){
         let elem = $("#timer");
 
         elem.html(timer++);
+
+        let newElem = elem.clone(true);
+        elem.before(newElem);
+        elem.remove();
+
+        elem = newElem;
 
         let left = $("#background").width() - elem.width() - 10;
         elem.css({'left': left});
@@ -93,7 +99,13 @@ function showMessageBox(msg, flash = true) {
  * updates the counter with the current number of found items
  */
 function updateCounter() {
-    $("#counter").html(Number(foundItems.length) + "/" + numberOfItems);
+    let elem = $("#counterNumber");
+    
+    elem.html(foundItems.length);
+
+    newElem = elem.clone(true);
+    elem.before(newElem);
+    elem.remove();
 }
 
 /**

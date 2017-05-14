@@ -52,6 +52,24 @@
             "height": "5.2vh",
             "image": "/img/level3/8.png"
         },
+        {
+            "left": "51.5vh",
+            "top": "48.5vh",
+            "height": "5.3vh",
+            "image": "/img/level3/9.png"
+        },
+        {
+            "left": "63.9vh",
+            "top": "56.6vh",
+            "height": "4.4vh",
+            "image": "/img/level3/10.png"
+        },
+        {
+            "left": "67.5vh",
+            "top": "55vh",
+            "height": "4.2vh",
+            "image": "/img/level3/11.png"
+        },
 
                 {
             "left": "8.5vh",

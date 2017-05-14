@@ -1,0 +1,63 @@
+{
+    "level": 3,
+    "message": "Vind alle koffers!",
+    "succes_message": "Je hebt een koffer gevonden!",
+    "background_image_url": "/img/level3/background.jpg",
+    "items": [
+        {
+            "left": "8.6vh",
+            "top": "24.4vh",
+            "height": "4.3vh",
+            "image": "/img/level3/1.png"
+        },
+        {
+            "left": "13.1vh",
+            "top": "21vh",
+            "height": "5.5vh",
+            "image": "/img/level3/2.png"
+        },
+        {
+            "left": "20.9vh",
+            "top": "18vh",
+            "height": "4vh",
+            "image": "/img/level3/3.png"
+        },
+        {
+            "left": "23.8vh",
+            "top": "15.9vh",
+            "height": "4.3vh",
+            "image": "/img/level3/4.png"
+        },
+        {
+            "left": "27.7vh",
+            "top": "12.3vh",
+            "height": "5.8vh",
+            "image": "/img/level3/5.png"
+        },
+        {
+            "left": "20.6vh",
+            "top": "21.3vh",
+            "height": "4.6vh",
+            "image": "/img/level3/6.png"
+        },
+        {
+            "left": "34.3vh",
+            "top": "28.6vh",
+            "height": "7.6vh",
+            "image": "/img/level3/7.png"
+        },
+        {
+            "left": "26.3vh",
+            "top": "38.3vh",
+            "height": "5.2vh",
+            "image": "/img/level3/8.png"
+        },
+
+                {
+            "left": "8.5vh",
+            "top": "10000vh",
+            "height": "4.3vh",
+            "image": "/img/level3/1.png"
+        }
+    ]
+}

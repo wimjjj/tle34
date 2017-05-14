@@ -70,8 +70,68 @@
             "height": "4.2vh",
             "image": "/img/level3/11.png"
         },
-
-                {
+        {
+            "left": "79.6vh",
+            "top": "24.2vh",
+            "height": "5.7vh",
+            "image": "/img/level3/12.png"
+        },
+        {
+            "left": "93.1vh",
+            "top": "25.5vh",
+            "height": "7vh",
+            "image": "/img/level3/13.png"
+        },
+        {
+            "left": "98.2vh",
+            "top": "31.5vh",
+            "height": "3.8vh",
+            "image": "/img/level3/14.png"
+        },
+        {
+            "left": "101.8vh",
+            "top": "33.7vh",
+            "height": "3.8vh",
+            "image": "/img/level3/15.png"
+        },
+        {
+            "left": "102.7vh",
+            "top": "38vh",
+            "height": "4.5vh",
+            "image": "/img/level3/16.png"
+        },              
+        {
+            "left": "92vh",
+            "top": "36.9vh",
+            "height": "5.2vh",
+            "image": "/img/level3/17.png"
+        },          
+        {
+            "left": "86.6vh",
+            "top": "33.6vh",
+            "height": "5.2vh",
+            "image": "/img/level3/18.png"
+        },           
+        {
+            "left": "82.8vh",
+            "top": "30.5vh",
+            "height": "5.2vh",
+            "image": "/img/level3/19.png"
+        },  
+        {
+            "left": "92vh",
+            "top": "45.5vh",
+            "height": "7vh",
+            "image": "/img/level3/20.png"
+        },
+        {
+            "left": "76.5vh",
+            "top": "38vh",
+            "height": "6vh",
+            "image": "/img/level3/21.png"
+        },         
+        
+        {
             "left": "8.5vh",
             "top": "10000vh",
             "height": "4.3vh",

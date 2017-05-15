@@ -1,6 +1,6 @@
 {
     "level": 3,
-    "message": "Vind alle koffers!",
+    "message": "Vind alle koffers",
     "succes_message": "Je hebt een koffer gevonden!",
     "background_image_url": "/img/level3/background.jpg",
     "items": [
@@ -101,7 +101,7 @@
             "image": "/img/level3/16.png"
         },              
         {
-            "left": "92vh",
+            "left": "91.9vh",
             "top": "36.9vh",
             "height": "5.2vh",
             "image": "/img/level3/17.png"
@@ -129,13 +129,18 @@
             "top": "38vh",
             "height": "6vh",
             "image": "/img/level3/21.png"
-        },         
-        
+        },
         {
-            "left": "8.5vh",
-            "top": "10000vh",
-            "height": "4.3vh",
-            "image": "/img/level3/1.png"
-        }
+            "left": "65vh",
+            "top": "16vh",
+            "height": "4vh",
+            "image": "/img/level3/22.png"
+        },
+        {
+            "left": "51.1vh",
+            "top": "13.1vh",
+            "height": "3vh",
+            "image": "/img/level3/23.png"
+        }                
     ]
 }

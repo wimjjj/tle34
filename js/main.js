@@ -140,6 +140,10 @@ function misClicked(e){
 }
 
 /**
+ * 
+ */
+var timerId = 0;
+/**
  * add i to the points and redraw the elem
  * @param {number} i 
  */
@@ -155,7 +159,9 @@ function addPoints(i){
     displayPointsElem.before(newDisplayPointsElem);
     displayPointsElem.remove();
 
-    setTimeout(() => {
+    clearTimeout(timerId);
+
+    timerId = setTimeout(() => {
         $("#newPoints").html("");
     }, 1500);
 

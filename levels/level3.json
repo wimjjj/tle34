@@ -1,146 +1,110 @@
 {
-    "level": 3,
-    "message": "Vind alle koffers",
-    "succes_message": "Je hebt een koffer gevonden!",
-    "background_image_url": "/img/level3/background.jpg",
+    "level": 2,
+    "message": "Vind alle vliegtuigen",
+    "succes_message": "Je hebt een vliegtuig gevonden!",
+    "background_image_url": "/img/level2/background.jpg",
     "items": [
         {
-            "left": "8.6vh",
-            "top": "24.4vh",
-            "height": "4.3vh",
-            "image": "/img/level3/1.png"
+            "left": "49.3vh",
+            "top": "50.8vh",
+            "height": "16vh",
+            "image": "/img/level2/plane1.png"
         },
         {
-            "left": "13.1vh",
-            "top": "21vh",
-            "height": "5.5vh",
-            "image": "/img/level3/2.png"
+            "left": "80vh",
+            "top": "5vh",
+            "height": "10vh",
+            "image": "/img/level2/plane2.png"
         },
         {
-            "left": "20.9vh",
-            "top": "18vh",
-            "height": "4vh",
-            "image": "/img/level3/3.png"
+            "left": "0vh",
+            "top": "33vh",
+            "height": "14vh",
+            "image": "/img/level2/plane3.png"
         },
         {
-            "left": "23.8vh",
-            "top": "15.9vh",
-            "height": "4.3vh",
-            "image": "/img/level3/4.png"
-        },
-        {
-            "left": "27.7vh",
-            "top": "12.3vh",
-            "height": "5.8vh",
-            "image": "/img/level3/5.png"
-        },
-        {
-            "left": "20.6vh",
-            "top": "21.3vh",
-            "height": "4.6vh",
-            "image": "/img/level3/6.png"
-        },
-        {
-            "left": "34.3vh",
-            "top": "28.6vh",
-            "height": "7.6vh",
-            "image": "/img/level3/7.png"
-        },
-        {
-            "left": "26.3vh",
-            "top": "38.3vh",
-            "height": "5.2vh",
-            "image": "/img/level3/8.png"
-        },
-        {
-            "left": "51.5vh",
-            "top": "48.5vh",
-            "height": "5.3vh",
-            "image": "/img/level3/9.png"
-        },
-        {
-            "left": "63.9vh",
-            "top": "56.6vh",
-            "height": "4.4vh",
-            "image": "/img/level3/10.png"
-        },
-        {
-            "left": "67.5vh",
-            "top": "55vh",
-            "height": "4.2vh",
-            "image": "/img/level3/11.png"
-        },
-        {
-            "left": "79.6vh",
-            "top": "24.2vh",
-            "height": "5.7vh",
-            "image": "/img/level3/12.png"
-        },
-        {
-            "left": "93.1vh",
-            "top": "25.5vh",
-            "height": "7vh",
-            "image": "/img/level3/13.png"
-        },
-        {
-            "left": "98.2vh",
-            "top": "31.5vh",
-            "height": "3.8vh",
-            "image": "/img/level3/14.png"
-        },
-        {
-            "left": "101.8vh",
-            "top": "33.7vh",
-            "height": "3.8vh",
-            "image": "/img/level3/15.png"
-        },
-        {
-            "left": "102.7vh",
-            "top": "38vh",
-            "height": "4.5vh",
-            "image": "/img/level3/16.png"
-        },              
-        {
-            "left": "91.9vh",
-            "top": "36.9vh",
-            "height": "5.2vh",
-            "image": "/img/level3/17.png"
-        },          
-        {
-            "left": "86.6vh",
-            "top": "33.6vh",
-            "height": "5.2vh",
-            "image": "/img/level3/18.png"
-        },           
-        {
-            "left": "82.8vh",
-            "top": "30.5vh",
-            "height": "5.2vh",
-            "image": "/img/level3/19.png"
-        },  
-        {
-            "left": "92vh",
-            "top": "45.5vh",
-            "height": "7vh",
-            "image": "/img/level3/20.png"
-        },
-        {
-            "left": "76.5vh",
-            "top": "38vh",
+            "left": "104vh",
+            "top": "7vh",
             "height": "6vh",
-            "image": "/img/level3/21.png"
+            "image": "/img/level2/plane4.png"
         },
         {
-            "left": "65vh",
-            "top": "16vh",
-            "height": "4vh",
-            "image": "/img/level3/22.png"
+            "left": "108vh",
+            "top": "10.3vh",
+            "height": "12vh",
+            "image": "/img/level2/plane5.png"
         },
         {
-            "left": "51.1vh",
-            "top": "13.1vh",
-            "height": "3vh",
-            "image": "/img/level3/23.png"
-        }                
+            "left": "79.7vh",
+            "top": "12.5vh",
+            "height": "9vh",
+            "image": "/img/level2/plane6.png"
+        },
+        {
+            "left": "27vh",
+            "top": "26vh",
+            "height": "16vh",
+            "image": "/img/level2/plane7.png"
+        },
+        {
+            "left": "85.1vh",
+            "top": "18.5vh",
+            "height": "9.3vh",
+            "image": "/img/level2/plane8.png"
+        },
+        {
+            "left": "86vh",
+            "top": "22vh",
+            "height": "16vh",
+            "image": "/img/level2/plane9.png"
+        },
+        {
+            "left": "53.2vh",
+            "top": "24.2vh",
+            "height": "15.3vh",
+            "image": "/img/level2/plane10.png"
+        },
+        {
+            "left": "0vh",
+            "top": "41.5vh",
+            "height": "13.6vh",
+            "image": "/img/level2/plane11.png"
+        },
+        {
+            "left": "9.8vh",
+            "top": "51.5vh",
+            "height": "13.5vh",
+            "image": "/img/level2/plane12.png"
+        },
+        {
+            "left": "16.3vh",
+            "top": "56.5vh",
+            "height": "17vh",
+            "image": "/img/level2/plane13.png"
+        },
+        {
+            "left": "129.2vh",
+            "top": "0vh",
+            "height": "13.5vh",
+            "image": "/img/level2/plane15.png"
+        },
+        {
+            "left": "75vh",
+            "top": "35vh",
+            "height": "30vh",
+            "image": "/img/level2/plane14.png"
+        },
+        {
+            "left": "61vh",
+            "top": "4.9vh",
+            "height": "7.2vh",
+            "image": "/img/level2/plane16.png"
+        },
+        {
+            "left": "59.6vh",
+            "top": "10.5vh",
+            "height": "6.5vh",
+            "image": "/img/level2/plane17.png"
+        }
     ]
 }

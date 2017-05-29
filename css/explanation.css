@@ -41,11 +41,7 @@ h2 {
     margin-top: 65vh;
 }
 
-footer a {
-    margin-top: 50px;
+footer * {
     font-size: 8vh;
-}
-
-a{
-    text-decoration: none;
+    cursor: pointer;
 }

@@ -15,6 +15,14 @@
     height: 100vh;
 }
 
+#helpButton{
+    position: fixed;
+    top: -1.4vh;
+    left: 0.1vh;
+    text-decoration: none;
+    font-size: 5vh;
+}
+
 .messageBox {
     position: fixed;
     top: 54vh;

@@ -83,7 +83,7 @@ function add($conn, $name, $score){
         $name = mysqli_real_escape_string($conn, $name);
         $score = mysqli_real_escape_string($conn, $score);
         $date = date("d-m-Y");
-        $query = "INSERT INTO scores (name, score, date) VALUES (". $name .  ", ". $score . ", ". $date .")";
+        $query = "INSERT INTO scores (name, score, date) VALUES ('$name', '$score', '$date')";
 
         $result = $conn->query($query);
     }

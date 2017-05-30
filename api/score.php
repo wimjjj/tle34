@@ -63,7 +63,7 @@
             exit;
         }
 
-        $response['data'] = getById($conn->insert_id);
+        // $response['data'] = getById($conn->insert_id);
 
         echo json_decode($response);
         exit;

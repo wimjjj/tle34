@@ -36,7 +36,7 @@
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $response = [];
 
-        if( !is_numeric($_POST['score']) ){
+        if( !is_numeric(float_val($_POST['score'])) ){
             $response['error'] = ['validation' => 'score not valid'];
 
             echo json_encode($response);

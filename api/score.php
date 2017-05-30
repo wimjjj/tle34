@@ -33,11 +33,11 @@
         ];
 
         isset($GET['offset']) ? $offset = $GET['offset'] + 25 : $offset = 25;
-        $response['links'] = [
-            'next' => "parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH)?offset=$offset"
-        ]
+        $response['links'] = ['next' => (string)(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH) + "?offset=$offset")];
 
-     }
+        echo json_encode($response);
+        exit;
+    }
 
     function add($conn, $name, $score){
         $name = mysqli_real_escape_string($conn, $name);

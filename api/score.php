@@ -5,15 +5,21 @@
      * Date: 4-5-2017
      * Time: 15:24
      */
-    require('dbconnect.php');
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $db);
+     
+     try {
+        require('dbconnect.php');
+         
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $db);
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    echo "Connected successfully";
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        echo "Connected successfully";
+     } catch (Exception $e) {
+         echo $e->getMessage();
+     }
 
 //     function add($conn, $name, $score){
 //         $name = mysqli_real_escape_string($conn, $name);

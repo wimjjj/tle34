@@ -123,12 +123,10 @@ function checkForWin() {
         timePoints < 0 ? timePoints = 0 : timePoints = timePoints;
         addPoints(timePoints);
 
-        setTimeout(() => {
-            levelNummer++;
-            window.location.href = "/level.html?level=" + levelNummer;
-        }, 4000);
+        window.location.href = "/endlevel.html?level=" + levelNummer + "&score=" + points + "&time=" + timer;
     }
 }
+
 
 /**
  * eventListener for misclicks

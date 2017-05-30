@@ -17,7 +17,7 @@ $.getJSON('/api/topscore.php').then((result) => {
 
 $.post('/api/score.php', {
     name: 'wim',
-    time: time
+    score: score
 }).then((result) => {
     console.log(result);
 })

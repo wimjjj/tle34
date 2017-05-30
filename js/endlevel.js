@@ -14,3 +14,10 @@ $.getJSON('/api/topscore.php').then((result) => {
     document.getElementById('recordTime').innerHTML = result.time;
     document.getElementById('recordName').innerHTML = result.name;
 });
+
+$.post('/api/score.php', {
+    name: name,
+    score: score
+}).then((result) => {
+    console.log(result);
+})

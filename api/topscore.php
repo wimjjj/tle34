@@ -1,7 +1,7 @@
 <?php
 
 $response = [
-    'time' => 10,
+    'score' => 10,
     'name' => 'wim'
 ];
 

@@ -36,14 +36,14 @@
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $response = [];
 
-        if( !(isset($_POST['score']) && is_numeric($_POST['score'])) ){
+        if(!is_numeric($_POST['score'])){
             $response['error'] = ['validation' => 'score not valid'];
 
             echo json_encode($response);
             exit;
         }
 
-        if(isset($_POST['name'])){
+        if(!isset($_POST['name'])){
             $response['error'] = [
                 'validation' => 'name not valid'
             ];

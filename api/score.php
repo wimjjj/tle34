@@ -52,7 +52,7 @@
             exit;
         }
 
-        add($conn, $_POST('name'), $_POST['score']);
+        add($conn, $_POST['name'], $_POST['score']);
 
         $response['msg'] = 'succes';
 

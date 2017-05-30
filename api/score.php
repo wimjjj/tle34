@@ -76,7 +76,7 @@
     function listScores($conn, $offset = 0) {
         $array = [];
 
-        $query = "SELECT * FROM scores ORDER BY score LIMIT 25 OFFSET $offset";
+        $query = "SELECT * FROM scores ORDER BY score DESC LIMIT 25 OFFSET $offset";
         $result = $conn->query($query);
 
         while ($row = $result->fetch_assoc())

@@ -63,7 +63,7 @@
             exit;
         }
 
-        $response['msg'] = 'succes';
+        $response['data'] = getById($conn->insert_id);
 
         echo json_decode($response);
         exit;
@@ -96,3 +96,11 @@ function add($conn, $name, $score){
 
         return $conn->query($query);
     }
+
+
+function getById($id){
+        $query = "SELECT * FROM scores WHERE id = $id";
+        $result = $conn->query($query);
+
+        return $result->fetch_assoc();
+}

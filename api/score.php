@@ -52,10 +52,12 @@
             exit;
         }
 
-        add($conn, $_POST['name'], $_POST['score']);
+        $succes = add($conn, $_POST['name'], $_POST['score']);
 
-        if(size_of($conn->error_get_last()) > 0){
-            $response['error']  = ['mysql_error' => $conn->error_get_last()];
+        if(!$succes){
+            $response['error'] = [
+                'error' => $conn->error
+            ];
 
             echo json_encode($response);
             exit;
@@ -92,5 +94,5 @@ function add($conn, $name, $score){
         $date = date("d-m-Y");
         $query = "INSERT INTO scores (name, score, date) VALUES ('$name', '$score', '$date')";
 
-        $result = $conn->query($query);
+        return $conn->query($query);
     }

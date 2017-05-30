@@ -9,3 +9,8 @@ level++;
 document.getElementById('score').innerHTML = score;
 document.getElementById('time').innerHTML = time;
 document.getElementById('next').href = "/level.html?level=" + level;
+
+$.getJSON('/api/topscore.php').then((result) => {
+    document.getElementById('recordTime').innerHTML = result.time;
+    document.getElementById('recordName').innerHTML = result.name;
+});

@@ -54,6 +54,13 @@
 
         add($conn, $_POST['name'], $_POST['score']);
 
+        if($conn->error_get_last()){
+            $response['error']  = ['mysql_error' => $conn->error_get_last()];
+
+            echo json_encode($response);
+            exit;
+        }
+
         $response['msg'] = 'succes';
 
         echo json_decode($response);

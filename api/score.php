@@ -31,7 +31,7 @@
         ];
 
         isset($GET['offset']) ? $offset = $GET['offset'] + 25 : $offset = 25;
-        $response['links'] = ['next' => (string)(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH) + "?offset=$offset")];
+        $response['links'] = ['next' => strtok($_SERVER["REQUEST_URI"],'?') + "?offset=$offset"];
 
         echo json_encode($response);
         exit;

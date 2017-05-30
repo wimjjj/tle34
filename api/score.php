@@ -1,14 +1,9 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: Tessa
-     * Date: 4-5-2017
-     * Time: 15:24
-     */
      //gives us the $conn var
      require('./dbconnect.php');
-         
-     if($_SERVER['REQUEST_METHOD'] == "GET"){
+
+    //Get the list with scores 
+    if($_SERVER['REQUEST_METHOD'] == "GET"){
         $response = [];
         $scores = [];
             
@@ -37,16 +32,36 @@
         exit;
     }
 
-    function add($conn, $name, $score){
-        $name = mysqli_real_escape_string($conn, $name);
-        $score = mysqli_real_escape_string($conn, $score);
-        $date = date("d-m-Y");
-        $query = "INSERT INTO scores (name, score, date) VALUES (". $name .  ", ". $score . ", ". $date .")";
+    //Add a new score
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        $response = [];
 
-        $result = $conn->query($query);
+        if(!(isset($_POST['score']) && is_numeric($_POST('score'))){
+            $response['error'] = [
+                'validation' => 'score not valid'
+            ];
 
+            echo json_encode($response);
+            exit;
+        }
+
+        if(isset($_POST['name'])){
+            $response['error'] = [
+                'validation' => 'name not valid'
+            ];
+
+            echo json_encode($response);
+            exit;
+        }
+
+        add($conn, $_POST('name'), $_POST['score']);
+
+        $response['msg'] = 'succes';
+
+        echo json_decode($response);
+        exit;
     }
-
+    
 /**
  * @param $conn
  * @return array
@@ -63,4 +78,14 @@
         }
 
         return $array;
+    }
+
+
+function add($conn, $name, $score){
+        $name = mysqli_real_escape_string($conn, $name);
+        $score = mysqli_real_escape_string($conn, $score);
+        $date = date("d-m-Y");
+        $query = "INSERT INTO scores (name, score, date) VALUES (". $name .  ", ". $score . ", ". $date .")";
+
+        $result = $conn->query($query);
     }

@@ -6,7 +6,7 @@
      * Time: 15:24
      */
      //gives us the $conn var
-     require('dbconnect.php');
+     require('./dbconnect.php');
          
      if($_SERVER['REQUEST_METHOD'] == "GET"){
         $response = [];
@@ -14,9 +14,7 @@
             
         if(isset($_GET['offset'])){
             if(is_numeric($_GET['offset'])){
-                echo json_encode([
-                    'error' => "invalid offset"
-                ]);
+                echo json_encode(['error' => "invalid offset"]);
                 exit;
             } 
 
@@ -56,7 +54,7 @@
     function listScores($conn, $offset = 0) {
         $array = [];
 
-        $query = "SELECT name, score, date FROM 'scores' ORDER BY score LIMIT 25 OFFSET $offset";
+        $query = "SELECT * FROM scores ORDER BY score LIMIT 25 OFFSET $offset";
         $result = $conn->query($query);
 
         while ($row = $result->fetch_assoc())

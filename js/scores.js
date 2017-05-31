@@ -21,5 +21,5 @@ $.getJSON('/api/topscore.php?level=4').then((result) => {
 });
 
 function renderScore(level, name, score){
-    document.getElementById('lvl' + level).innerHTML = 'Level ' + level + ': ' + name + ', ' + score;
+    document.getElementById('lvl' + level).innerHTML = 'Level ' + level + ': ' + name + ' met ' + score + ' punten';
 }

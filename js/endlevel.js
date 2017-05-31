@@ -3,7 +3,7 @@ var getParams = new URLSearchParams(window.location.search);
 var score = getParams.get('score');
 var time = getParams.get('time');
 var level = getParams.get('level');
-var nextLevel = level + 1;
+var nextLevel = Number(level) + 1;
 
 
 document.getElementById('score').innerHTML = score;

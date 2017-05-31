@@ -1,0 +1,13 @@
+#name {
+    font-size: 5vh;
+    width: 50vh;
+    margin-left: 40vh;
+    height: 6vh;
+    border: 2px red solid;
+    border-radius: 1vh;
+    padding: 1vh;
+}
+
+p {
+    margin-top: 1vh;
+}

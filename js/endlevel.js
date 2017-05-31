@@ -4,7 +4,7 @@ var score = getParams.get('score');
 var time = getParams.get('time');
 var level = getParams.get('level');
 var nextLevel = Number(level) + 1;
-
+var name = document.cookie.replace(/(?:(?:^|.*;\s*)name\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 
 document.getElementById('score').innerHTML = score;
 document.getElementById('time').innerHTML = time;
@@ -17,7 +17,7 @@ $.getJSON('/api/topscore.php?level=' + level).then((result) => {
 });
 
 $.post('/api/score.php', {
-    name: 'wim',
+    name: name,
     score: score,
     level: level
 }).then((result) => {

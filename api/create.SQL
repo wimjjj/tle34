@@ -1,0 +1,6 @@
+CREATE TABLE scores (
+    id INT(32) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(200) NOT NULL,
+    score INT(32) NOT NULL,
+    level INT(32) NOT NULL,
+    date DATE NOT NULL);

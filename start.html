@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="css/end.css">
+    <link rel="stylesheet" type="text/css" href="css/start.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>Game - uitgespeeld</title>
@@ -10,14 +12,12 @@
 
 <img src="img/background.png" id="background">
 
-<h1>Je hebt het spel uitgespeeld!</h1>
+<h1>Vul hier je naam in:</h1>
 
-<br />
-<h2>Jouw Scores:</h2>
-<p id=scores></p>
-    
-<a href="/index.html"><h2>- HOME -</h2></a>
+<input id="name" type="text" />
 
-<script src="/js/end.js"></script>
+<p onclick="setName()">- start spel -</p>
+
+<script src="/js/start.js"></script>
 </body>
 </html>

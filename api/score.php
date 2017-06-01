@@ -21,7 +21,7 @@
         $response['data'] = $scores;
 
         $response['meta'] = [
-            'params' => $GET,
+            'params' => $_GET,
             'uri' => $_SERVER["REQUEST_URI"] 
         ];
 
@@ -43,6 +43,13 @@
             exit;
         }
 
+        if( !is_numeric($_POST['level']) ){
+            $response['error'] = ['validation' => 'level not valid'];
+
+            echo json_encode($response);
+            exit;
+        }
+
         if( !isset($_POST['name']) ){
             $response['error'] = [
                 'validation' => 'name not valid'
@@ -52,7 +59,7 @@
             exit;
         }
 
-        $succes = add($conn, $_POST['name'], $_POST['score']);
+        $succes = add($conn, $_POST['name'], $_POST['score'], $_POST["level"]);
 
         if(!$succes){
             $response['error'] = [
@@ -63,9 +70,9 @@
             exit;
         }
 
-        // $response['data'] = getById($conn->insert_id);
+        $response['data'] = getById($conn, $conn->insert_id);
 
-        echo json_decode($response);
+        echo json_encode($response);
         exit;
     }
     
@@ -76,7 +83,7 @@
     function listScores($conn, $offset = 0) {
         $array = [];
 
-        $query = "SELECT * FROM scores ORDER BY score DESC LIMIT 25 OFFSET $offset";
+        $query = "SELECT * FROM scores ORDER BY score DESC LIMIT 25 OFFSET $offset;";
         $result = $conn->query($query);
 
         while ($row = $result->fetch_assoc())
@@ -88,19 +95,20 @@
     }
 
 
-function add($conn, $name, $score){
+function add($conn, $name, $score, $level){
         $name = mysqli_real_escape_string($conn, $name);
         $score = mysqli_real_escape_string($conn, $score);
+        $level = mysqli_real_escape_string($conn, $level);
 
-        $query = "INSERT INTO scores (name, score, date) VALUES ('$name', '$score', NOW())";
+        $query = "INSERT INTO scores (name, score, level,  date) VALUES ('$name', '$score', '$level', NOW())";
 
         return $conn->query($query);
     }
 
 
-function getById($id){
-        $query = "SELECT * FROM scores WHERE id = $id";
-        $result = $conn->query($query);
+function getById($conn, $id){
+    $query = "SELECT * FROM scores WHERE id = $id";
+    $result = $conn->query($query);
 
-        return $result->fetch_assoc();
+    return $result->fetch_assoc();
 }

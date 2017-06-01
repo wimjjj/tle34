@@ -13,6 +13,16 @@ h1, h2, h3, p {
     text-align: center;
 }
 
+.overlay   {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255 , 0.6);
+  opacity: 1;
+} 
+
 #background {
     position: fixed;
     top: 0;
@@ -22,8 +32,8 @@ h1, h2, h3, p {
 }
 
 h2 {
-    font-size: 6vh;  
-    margin-top: -5vh;  
+    font-size: 6vh;
+    margin-top: -5vh;
 }
 
 p{

@@ -5,7 +5,7 @@
     font-family: 'Walter Turncoat', cursive;
     font-weight: 900;
     color: red;
-    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    /*text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;*/
     text-align: center;
     max-width: 133vh;
 }
@@ -15,17 +15,24 @@
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: -100;
+    z-index: -1;
 }
 
 .container {
-    padding: 30px;
-    margin: 30px;
-    border: 3px solid red;
-    background-color: white;
-    border-radius: 15px;
-    opacity: 0.75;
+    opacity: 1;
+
 }
+
+.overlay   {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255 , 0.6);
+  opacity: 1;
+}
+
 
 #content {
     font-size: 5vh;

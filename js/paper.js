@@ -10,7 +10,7 @@ function drawScores(scores){
     elem.html("");
 
     var html = ``;
-    for(var i = 1; i < scores.length; i++){
+    for(var i = 1; i < scores.length + 1; i++){
         var score = scores[i]
         html += `<p>` + i + `: ` + score.name + `: ` + score.score + `</p>`;
     }

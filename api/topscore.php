@@ -25,7 +25,11 @@ $level = mysqli_real_escape_string($conn, $level);
 $query = "SELECT * FROM scores WHERE level = $level ORDER BY score DESC LIMIT $limit;";
 $result = $conn->query($query);
 
-$data = $result->fetch_assoc();
+$data = [];
+
+while($row = $result->fetch_assoc()){
+    $data[] = $row;
+}
 
 $response["data"] = $data;
 

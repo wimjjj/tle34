@@ -10,8 +10,9 @@ function drawScores(scores){
     elem.html("");
 
     var html = ``;
-    for(score of scores){
-        html += `<p>` + score.name + `: ` + score.score + `</p>`;
+    for(var i = 1; i < scores.length; i++){
+        var score = scores[i]
+        html += `<p>` + i + `: ` + score.name + `: ` + score.score + `</p>`;
     }
     elem.html(html);
 }

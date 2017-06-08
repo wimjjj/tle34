@@ -17,4 +17,5 @@ function drawScores(scores){
     elem.html(html);
 }
 
-setInterval(loadscores, 1000);
+loadscores();
+setInterval(loadscores, 1500);

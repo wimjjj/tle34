@@ -82,7 +82,8 @@
  */
     function listScores($conn, $offset = 0) {
         $array = [];
-
+        $offset = mysqli_real_escape_string($conn, $offset);
+        
         $query = "SELECT * FROM scores ORDER BY score DESC LIMIT 25 OFFSET $offset;";
         $result = $conn->query($query);
 

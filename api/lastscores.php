@@ -15,7 +15,10 @@ echo json_encode($response);
 exit;
 
 function getLastScoreForLevel($conn, $level){
-    $query = "SELECT * FROM scores WHERE level = $level ORDER BY date DESC LIMIT 1";
+    $level = mysqli_real_escape_string($conn, $level);
+
+    $query = "SELECT * FROM scores WHERE level = $level ORDER BY date DESC LIMIT 1;";
+
     $result = $conn->query($query);
     if($result)
         return $result->fetch_assoc();

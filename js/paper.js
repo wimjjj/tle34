@@ -12,7 +12,7 @@ function drawScores(scores){
     var html = ``;
     for(var i = 1; i < scores.length + 1; i++){
         var score = scores[i - 1];
-        html += `<p>` + i + `: ` + score.name + `: ` + score.score + `</p>`;
+        html += `<p>` + i + `. ` + score.name + `: ` + score.score + `</p>`;
     }
     elem.html(html);
 }

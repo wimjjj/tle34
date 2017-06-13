@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     private NfcAdapter nfcAdapter;
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private String[][] techList;
 
     private int score = 0;
+
+    private ArrayList<String> foundTag = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
         updateId(id);
 
-        increaseScore();
+        increaseScore(id);
     }
 
     private void updateId(String id){
@@ -96,8 +100,21 @@ public class MainActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.tag)).setText(String.valueOf(id));
     }
 
-    private void increaseScore(){
+    private void increaseScore(String id){
+        for(String s : foundTag){
+            if(s.equals(id)){
+                alreadyFound();
+                return;
+            }
+        }
+
+        foundTag.add(id);
+
         score++;
         ((TextView) findViewById(R.id.score)).setText(String.valueOf(score));
+    }
+
+    private void alreadyFound(){
+
     }
 }

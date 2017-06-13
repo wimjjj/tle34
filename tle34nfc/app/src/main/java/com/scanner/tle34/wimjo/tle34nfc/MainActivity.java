@@ -3,6 +3,7 @@ package com.scanner.tle34.wimjo.tle34nfc;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
@@ -13,6 +14,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,21 +22,25 @@ public class MainActivity extends AppCompatActivity {
 
     private PendingIntent pendingIntent;
 
-    private String[][] techListsArray;
-
     private IntentFilter[] intentFilters;
 
     private String[][] techList;
 
-    private int score = 0;
+    private int counter = 0;
 
     private ArrayList<String> foundTags = new ArrayList<String>();
+
+    private int itemsInLevel = 8;
+
+    private int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
+
+        setFonts();
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
@@ -65,16 +71,19 @@ public class MainActivity extends AppCompatActivity {
         handleIntent(getIntent());
     }
 
+    @Override
     public void onPause() {
         super.onPause();
         nfcAdapter.disableForegroundDispatch(this);
     }
 
+    @Override
     public void onResume() {
         super.onResume();
         nfcAdapter.enableForegroundDispatch(this, pendingIntent, intentFilters, techList);
     }
 
+    @Override
     public void onNewIntent(Intent intent) {
         handleIntent(intent);
     }
@@ -98,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateId(String id){
         Log.i("nfc_ID", id);
-        ((TextView) findViewById(R.id.tag)).setText(String.valueOf(id));
     }
 
     private void increaseScore(String id){
@@ -113,14 +121,27 @@ public class MainActivity extends AppCompatActivity {
 
         foundTags.add(id);
 
-        score++;
-        ((TextView) findViewById(R.id.score)).setText(String.valueOf(score));
-        
+        counter++;
+
+        updateScore(10);
+
+        ((TextView) findViewById(R.id.counter)).setText(String.valueOf(counter) + "/8");
+
         playSound(R.raw.correct_click);
+
+        checkForWin();
+    }
+
+    private void checkForWin(){
+        if(foundTags.size() == itemsInLevel){
+            reset();
+            playSound(R.raw.level_complete);
+            //score API
+        }
     }
 
     private void alreadyFound(){
-        setMessage(getString(R.string.allready_found));
+        setMessage(getString(R.string.already_found));
         playSound(R.raw.wrong_click);
     }
 
@@ -135,4 +156,26 @@ public class MainActivity extends AppCompatActivity {
     private void playSound(int id){
         MediaPlayer.create(getApplicationContext(), id).start();
     }
+
+    private void reset(){
+        score = 0;
+        ((TextView) findViewById(R.id.score)).setText(R.string.score);
+        counter = 0;
+        ((TextView) findViewById(R.id.counter)).setText("0/8");
+        foundTags = new ArrayList<String>();
+    }
+
+    private void updateScore(int s){
+        score += s;
+        ((TextView) findViewById(R.id.score)).setText(getString(R.string.score_without_number) + String.valueOf(score));
+    }
+
+    private void setFonts(){
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/WalterTurncoat.ttf");
+
+        ((TextView)findViewById(R.id.counter)).setTypeface(typeface);
+        ((TextView)findViewById(R.id.msg)).setTypeface(typeface);
+        ((TextView)findViewById(R.id.score)).setTypeface(typeface);
+    }
+
 }

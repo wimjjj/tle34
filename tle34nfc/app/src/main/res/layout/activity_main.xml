@@ -4,44 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.scanner.tle34.wimjo.tle34nfc.MainActivity">
+    tools:context="com.scanner.tle34.wimjo.tle34nfc.MainActivity"
+    android:background="@drawable/background">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
 
 
         <TextView
             android:id="@+id/msg"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:textSize="38sp"
             android:textStyle="bold"
             android:text="@string/instructions"
-            android:textColor="#455A64"/>
+            android:textColor="#FF0000"
+            android:shadowColor="#000000"
+            android:shadowRadius="5"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#FF0000"
+            android:text="@string/_0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="200sp"
+            android:textStyle="bold"
+            android:shadowColor="#000000"
+            android:shadowRadius="10"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:fontFamily="fonts/WalterTurncoat"
+            />
 
         <TextView
             android:id="@+id/score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textColor="#455A64"
-            android:text="@string/_0"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:textSize="250sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tag"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="@string/tag_id"
-            android:textColor="#455A64"
+            android:text="@string/score"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textStyle="bold"
+            android:textSize="38sp"
+            android:textColor="#FF0000"
+            android:shadowColor="#000000"
+            android:shadowRadius="5"
+            android:shadowDx="5"
+            android:shadowDy="5"
             />
+
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

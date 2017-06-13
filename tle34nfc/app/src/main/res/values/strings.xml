@@ -3,4 +3,5 @@
     <string name="instructions">Vind alle vliegtuigen</string>
     <string name="_0">0</string>
     <string name="tag_id">tag_id</string>
+    <string name="allready_found">Deze heb je al</string>
 </resources>

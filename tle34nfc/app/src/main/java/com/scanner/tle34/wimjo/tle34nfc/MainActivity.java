@@ -3,6 +3,7 @@ package com.scanner.tle34.wimjo.tle34nfc;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.media.MediaPlayer;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.NfcA;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int score = 0;
 
-    private ArrayList<String> foundTag = new ArrayList<String>();
+    private ArrayList<String> foundTags = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,20 +102,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void increaseScore(String id){
-        for(String s : foundTag){
+        for(String s : foundTags){
             if(s.equals(id)){
                 alreadyFound();
                 return;
             }
         }
 
-        foundTag.add(id);
+        resetMessage();
+
+        foundTags.add(id);
 
         score++;
         ((TextView) findViewById(R.id.score)).setText(String.valueOf(score));
+        
+        playSound(R.raw.correct_click);
     }
 
     private void alreadyFound(){
+        setMessage(getString(R.string.allready_found));
+        playSound(R.raw.wrong_click);
+    }
 
+    private void setMessage(String msg){
+        ((TextView) findViewById(R.id.msg)).setText(msg);
+    }
+
+    private void resetMessage(){
+        setMessage(getResources().getString(R.string.instructions));
+    }
+
+    private void playSound(int id){
+        MediaPlayer.create(getApplicationContext(), id).start();
     }
 }
